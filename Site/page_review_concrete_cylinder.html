@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- since this may all go in a Claro embeded box, styling is all in here rather than a seperate file. -->
+<!-- since this may all go in a Claro embeded box, styling is all in here rather than a seperate file for now. -->
 <head>
 <style>
     body{
@@ -640,13 +640,13 @@
                 }
             }
         };
-        httpSetRequest.open('post', "GetSamples.php",true);
+        httpSetRequest.open('post', "/Server/handler_review",true);
         httpSetRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         httpSetRequest.send(setBind);
-        httpRowRequest.open('post', "GetSamples.php",true);
+        httpRowRequest.open('post', "/Server/handler_review.php",true);
         httpRowRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         httpRowRequest.send(rowBind);
-        httpSampleRequest.open('post', "GetSamples.php",true);
+        httpSampleRequest.open('post', "/Server/handler_review.php",true);
         httpSampleRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         httpSampleRequest.send(sampleBind);
     }
