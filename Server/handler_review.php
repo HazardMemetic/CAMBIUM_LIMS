@@ -87,25 +87,36 @@ function GetSamples($setID){
     $user = "chris_beetham";
     $pass = "Cambium2018";
     $connect = mysqli_connect($server,$user,$pass,$db);
+    //connect
     if(!$connect){
         echo "Error: " . mysqli_connect_error() . "<br><br>";
         exit;
     }
     error_log("Return Samples",0);
-    error_log($setID,0);
+    error_log("Set ID is: " + $setID,0);
     
     $sqlSample = "SELECT * FROM Samples WHERE SetID=$setID";
 
     $sampleResult = mysqli_query($connect, $sqlSample);
     
-    if(mysqli_num_rows($sampleResult) > 0){
-        $formatResult = mysqli_fetch_array($sampleResult);
-        $jsonResult = json_encode($formatResult);
+    $number_of_rows = mysqli_num_rows($sampleResult);
+    
+    $resultsArray = array();
+
+    while ($row = $sampleResult->fetch_assoc()) {
+        $resultsArray[] = $row;
+    }
+    
+    if($number_of_rows > 0){
+    	$jsonResult = json_encode($resultsArray);
+    	error_log($jsonResult,0);
         echo $jsonResult;
     }
+    
     else{
         error_log("failed to select any data");
     }
+    mysqli_free_result($sampleResult);
     mysqli_close($connect);
 }
 ?>

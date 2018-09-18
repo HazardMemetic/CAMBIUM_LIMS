@@ -84,3 +84,7 @@
     
     Future tests will require more advanced reporting including graphs and figures. These will likely require their own intermediary modules before API submission.
         
+{"samples":[{"ID":"","":""},
+            {"ID":"","":""}
+            ]
+}

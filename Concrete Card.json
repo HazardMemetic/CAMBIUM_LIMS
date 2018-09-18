@@ -1,0 +1,226 @@
+{
+    "type": "root",
+    "children": [
+        {
+            "type": "group",
+            "children": [
+                {
+                    "identifier": "LabCylNo",
+                    "title": "Lab Cylinder Number",
+                    "type": "text"
+                },
+                {
+                    "identifier": "AgeTest",
+                    "title": "Age of Test (Days)",
+                    "type": "integer"
+                },
+                {
+                    "identifier": "CastOn",
+                    "title": "Cast On",
+                    "type": "text"
+                },
+                {
+                    "identifier": "RecLab",
+                    "title": "Received in Lab",
+                    "type": "text"
+                },
+                {
+                    "identifier": "TestOn",
+                    "title": "Tested On",
+                    "type": "text"
+                },
+                {
+                    "identifier": "Dia",
+                    "title": "Diameter",
+                    "type": "decimal"
+                },
+                {
+                    "identifier": "Wgt",
+                    "title": "Weight",
+                    "type": "decimal"
+                },
+                {
+                    "identifier": "Dens",
+                    "title": "Density",
+                    "type": "decimal"
+                },
+                {
+                    "identifier": "CurTyp",
+                    "title": "Curing Type",
+                    "type": "text"
+                },
+                {
+                    "identifier": "Load",
+                    "title": "Load",
+                    "autoIdentifier": true,
+                    "type": "decimal"
+                },
+                {
+                    "identifier": "FracTyp",
+                    "title": "Type of Fracture",
+                    "type": "text"
+                },
+                {
+                    "identifier": "CmpStr",
+                    "title": "Compressive Strength",
+                    "type": "decimal"
+                }
+            ],
+            "title": "Group",
+            "identifier": "Row"
+        },
+        {
+            "identifier": "Spec28",
+            "title": "Spec 28 Day Strength",
+            "type": "decimal"
+        },
+        {
+            "identifier": "PNum",
+            "title": "Project Number",
+            "type": "text"
+        },
+        {
+            "identifier": "PName",
+            "title": "Project Name",
+            "type": "text"
+        },
+        {
+            "identifier": "Cntrct",
+            "title": "Contractor",
+            "type": "text"
+        },
+        {
+            "identifier": "Client",
+            "title": "Client",
+            "autoIdentifier": true,
+            "type": "text"
+        },
+        {
+            "identifier": "LocStruc",
+            "title": "Location on Structure",
+            "type": "text"
+        },
+        {
+            "identifier": "DateCst",
+            "title": "Date Cast",
+            "type": "text"
+        },
+        {
+            "identifier": "ConSup",
+            "title": "Concrete Supplier",
+            "type": "text"
+        },
+        {
+            "identifier": "CylCstBy",
+            "title": "Cylinders Cast By",
+            "type": "text"
+        },
+        {
+            "identifier": "MixChrg",
+            "title": "Time Mixer Charged",
+            "type": "text"
+        },
+        {
+            "identifier": "SpecSlmp",
+            "title": "Specified Slump",
+            "type": "decimal"
+        },
+        {
+            "identifier": "AirTemp",
+            "title": "Air Temperature",
+            "type": "decimal"
+        },
+        {
+            "identifier": "SpecAirCon",
+            "title": "Specified Air Content",
+            "type": "decimal"
+        },
+        {
+            "identifier": "AddOnJob",
+            "title": "Water Added on Job",
+            "type": "text"
+        },
+        {
+            "identifier": "TrkNum",
+            "title": "Truck Number",
+            "type": "integer"
+        },
+        {
+            "identifier": "NomAgg",
+            "title": "Nominal Agg Size",
+            "type": "text"
+        },
+        {
+            "identifier": "Admix",
+            "title": "Type of Admixtures",
+            "type": "text"
+        },
+        {
+            "identifier": "MinCurTemp",
+            "title": "Min Curing Temp",
+            "type": "text"
+        },
+        {
+            "identifier": "Pickup",
+            "title": "Pick-up Date & Time",
+            "type": "text"
+        },
+        {
+            "identifier": "RecLab",
+            "title": "Time Received in Lab",
+            "type": "text"
+        },
+        {
+            "identifier": "TimeCast",
+            "title": "Time Cylinders Cast",
+            "type": "text"
+        },
+        {
+            "identifier": "MesSlmp",
+            "title": "Measured Slump",
+            "type": "decimal"
+        },
+        {
+            "identifier": "ConTemp",
+            "title": "Temp of Concrete",
+            "type": "decimal"
+        },
+        {
+            "identifier": "MesAir",
+            "title": "Measured Air",
+            "type": "decimal"
+        },
+        {
+            "identifier": "AuthBy",
+            "title": "Authorized By",
+            "type": "text"
+        },
+        {
+            "identifier": "Quant",
+            "title": "Quantity",
+            "type": "decimal"
+        },
+        {
+            "identifier": "MoldTyp",
+            "title": "Type of Mold & Size",
+            "type": "text"
+        },
+        {
+            "identifier": "TickNo",
+            "title": "Ticket No.",
+            "type": "integer"
+        },
+        {
+            "identifier": "MaxCurTemp",
+            "title": "Max Curing Temp.",
+            "type": "decimal"
+        },
+        {
+            "identifier": "Rem",
+            "title": "Remarks",
+            "type": "text"
+        }
+    ],
+    "title": "Concrete Card",
+    "description": ""
+}
