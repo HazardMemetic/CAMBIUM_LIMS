@@ -1,0 +1,15 @@
+Cambium LIMS Notes
+
+initial_login_concrete_cylinder.html
+
+1. If you delete all rows, adding a row crashes the page
+2. Submit button doesn't work
+3. Dates should reference each other (so you can't do things out of order)
+4. Add units to measurements
+5. Standardize colons on form names
+6. Add validation (required fields)
+7. Work on responsiveness
+8. Increase content (Ongoing)
+9. Change from inline styling to separate stylesheet
+10. Make spacing consistent
+

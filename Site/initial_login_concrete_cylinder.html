@@ -1,210 +1,23 @@
 <!DOCTYPE html>
 <html>
 <!-- since this may all go in a Claro embeded box, styling is all in here rather than a seperate file. -->
-<head>
-<style>
-    body{
-        margin: 0px;
-    }
-    .navigation{
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0; 
-        left: 0;
-        background-color: #144d29; 
-        overflow-x: hidden; 
-        padding-top: 60px; 
-        transition: 0.5s;
-    }
-    .navigation a {
-        font-family: "Century Gothic";
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-    }
-    .navigation a:hover{
-        background-color: darkgray;
-        transition: 0.2s;
-    }
-    .navigation .closeButton {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-    .navPara {
-        font-family: "Century Gothic";
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-        margin: 0px;
-        cursor: pointer;
-    }
-    .navPara:hover {
-        background-color: darkgray;
-        transition: 0.2s;
-    }
-    .dropdown{
-        background-color: #3d4f44;
-        display: none;
-    }
-    .dropdown a{
-        font-size: 18px;
-    }
-    @media screen and (max-height: 450px) {
-        .navigation {padding-top: 15px;}
-        .navigation a {font-size: 18px;}
-        }
-    #openNav{
-        cursor: pointer;
-        margin-left: 20px;
-        text-align: center;
-        font-size: 1.6em;
-        opacity: 1.0;
-        transition: 0.3s;
-    }
-     #page {
-        transition: margin-left .5s;
-        padding: 5px;
-        max-width: 98%;
-        text-align: center;
-    }
-    .page-area{
-        width: 95%;
-        display: inline-block;
-        background-color: #f1f1f1;
-    }
-    .grid-container{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 15px;
-        padding: 15px;
-    }
-    .grid-container > div{
-        
-        background-color: lightgray;
-        border-radius: 0px;
-        padding: 15px;
-    }
-    .grid-topline{
-        grid-column: 1 / 3;
-    }
-    .grid-container-2{
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto auto auto;
-        grid-gap: 0px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 8px;
-        padding-top: 8pxl
-        border-radius: 0px;
-    }
-    .grid-container-2 > div{
-        background-color: lightgray;
-        border-radius: 0px;
-        padding: 4px;
-    }
-    .grid-topline-2{
-        grid-column: 1 / 9;
-    }
-    .lineItem2 > input{
-        margin: 2px auto;
-    }
-    .tableText{
-        text-align: center;
-        margin: auto;
-    }
-     p{
-        font-family: sans-serif;
-        text-align: left;
-        padding: 0px;
-        margin-left: 60px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    h2{
-        font-family: sans-serif;
-    }
-    input{
-        width: 80%;
-        height: 25px;
-        border-radius: 2px;
-        border-width: 3px;
-        border-style:solid;
-        border-color: whitesmoke;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        font-size: 1.0em;
-        font-weight: normal;
-        margin: 0px auto;
-    }
-    select{
-        width: 83%;
-        height: 35px;
-        border-radius: 2px;
-        border-width: 3px;
-        border-style:solid;
-        border-color: whitesmoke;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        font-size: 1.0em;
-        font-weight: normal;
-        margin: 0px auto; 
-    }
-    .interact{
-        width: 98%;
-        height: 40px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        text-align: center;
-        border-radius: 2px;
-    }
-    .tableButton{
-        width: 31px;
-        height: 31px;
-        border-radius: 2px;
-        text-align: center;
-        margin: 4px;
-        padding: 0px;
-        display: inline-block;
-    }
-    .tableButton:hover{
-        background-color: darkgray;
-    }
-    .interact:hover{
-        background-color: darkgray;
-    }
-  
-</style>
-
+<head>  
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="nav" class="navigation">
     <a id="closeNav" href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
     <a href="">Dashboard</a>
-    <p class="navPara" onclick = "toggleVisibility('InitialLoginDropdown')">Initial Login </p>
-        <div class = "dropdown" id = "InitialLoginDropdown" >
+    <p class="navPara" onclick="toggleVisibility('InitialLoginDropdown')">Initial Login </p>
+        <div class="dropdown" id="InitialLoginDropdown" >
             <a href="initial_login_concrete_cylinder.html">Concrete Cylinders</a>
             <a href="">Mortar Cubes</a>
             <a href="">Cores</a>
             <a href="">Grout Cylinders</a>
         </div>
     <a href="">Break Input</a>
-    <p class="navPara" onclick = "toggleVisibility('ReviewDropdown')">Review</p>
-        <div class = "dropdown" id = "ReviewDropdown" >
+    <p class="navPara" onclick="toggleVisibility('ReviewDropdown')">Review</p>
+        <div class="dropdown" id="ReviewDropdown" >
             <a href="/review_concrete_cylinder.html">Concrete Cylinders</a>
             <a href="">Mortar Cubes</a>
             <a href="">Cores</a>
@@ -213,12 +26,12 @@
     <a href="">Stats</a>
 </div>
 <div id="page">
-<form id="first stage" action = "/Server/handler_initial_login.php" method = "post">
-    <div class = "page-area">
+<form id="first stage" action="/Server/handler_initial_login.php" method="post">
+    <div class="page-area">
         <div class="grid-topline">
             <span style="float: left;" id="openNav"onclick="openNav()">&#9776;</span><h2>Set Details</h2>
         </div>
-        <div class = "grid-container">
+        <div class="grid-container">
 <!-- -------------------------------Title & Set Number--------------------------------------------- -->        
             <div class="grid-topline">
                 <div class="row"><p>Set Number:</p>
@@ -232,98 +45,98 @@
                     <input type="text" name="projectNumber" id="projectNumber">
                 </div>
                 <div class="lineItem"><p>Project Name:</p>
-                    <input type = "text" name="projectName" id="projectName">
+                    <input type="text" name="projectName" id="projectName">
                 </div>
                 <div class="lineItem"><p>Client</p>
-                    <input type = "text" name = "client" id="client">
+                    <input type="text" name="client" id="client">
                 </div>
                 <div class="lineItem"><p>Contractor:</p>
-                    <input type = "text" name = "contractor" id="contractor">
+                    <input type="text" name="contractor" id="contractor">
                 </div>
                 <div class="lineItem"><p>Location on Structure:</p> 
-                    <input type = "text" name = "locationOnStructure" id="locOnStructure">
+                    <input type="text" name="locationOnStructure" id="locOnStructure">
                 </div>
                 <div class="lineItem"><p>Concrete Supplier:</p>
-                    <input type = "text" name = "concreteSupplier" id="conSup">
+                    <input type="text" name="concreteSupplier" id="conSup">
                 </div>
                 <div class="lineItem"><p>Cylinders Cast By:</p>
-                    <input type = "text" name = "castBy" id="castBy">
+                    <input type="text" name="castBy" id="castBy">
                 </div>
                 <div class="lineItem"><p>Time Mixer Charged:</p>
-                    <input type = "text" name = "timeMixerCharged" id="timeMixCharged">
+                    <input type="text" name="timeMixerCharged" id="timeMixCharged">
                 </div>
                 <div class="lineItem"><p>Specified Slump:</p>
-                    <input type = "text" name = "specifiedSlump" id="specSlump">
+                    <input type="text" name="specifiedSlump" id="specSlump">
                 </div>
                 <div class="lineItem"><p>Air Temperature:</p>
-                    <input type = "text" name = "airTemp" id="airTemp">
+                    <input type="text" name="airTemp" id="airTemp">
                 </div>
                 <div class="lineItem"><p>Specified Air Content:</p>
-                    <input type = "text" name = "specifiedAirContent" id="specAirCont">
+                    <input type="text" name="specifiedAirContent" id="specAirCont">
                 </div>
                 <div class="lineItem"><p>Water Added On Job:</p>
                     <select class="" name="waterAdded" id="waterAdd">
-                        <option value = "yes">Yes</option>
+                        <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
                 <div class="lineItem"><p>Truck No.:</p>
-                    <input type = "text" name = "truckNumber" id="truckNum">
+                    <input type="text" name="truckNumber" id="truckNum">
                 </div>
                 <div class="lineItem"><p>Nominal Aggregate Size:</p>
-                    <input type = "text" name = "nominalAggSize" id="nomAggSize">
+                    <input type="text" name="nominalAggSize" id="nomAggSize">
                 </div>
                 <div class="lineItem"><p>Type of Admixtures:</p>
-                    <input type = "text" name = "admixtures" id="admix">
+                    <input type="text" name="admixtures" id="admix">
                 </div>
                 <div class="lineItem"><p>Minimum Curing Temperature:</p>
-                    <input type = "text" name = "minCuringTemp" id="minCurTemp">
+                    <input type="text" name="minCuringTemp" id="minCurTemp">
                 </div>
             </div>
-            <div class = "">
+            <div class="">
                 <div class="lineItem"><p>Report Date:</p>
-                    <input type = "date" name = "reportDate" id="repDate">
+                    <input type="date" name="reportDate" id="repDate">
                 </div>
                 <div class="lineItem"><p>Date Cast/Cored:</p>
-                    <input type = "date" name="dateCast" id="dateCast">
+                    <input type="date" name="dateCast" id="dateCast">
                 </div>
                 <div class="lineItem"><p>Time Lab Recieved Sample:</p>
-                    <input type = "time" name="receivedSample" id="receivedSample">
+                    <input type="time" name="receivedSample" id="receivedSample">
                 </div>
                 <div class="lineItem"><p>Pickup Date and Time:</p>
-                    <input type = "datetime-local" name="pickupDateTime" id="pickupDateTime">
+                    <input type="datetime-local" name="pickupDateTime" id="pickupDateTime">
                 </div>
                 <div class="lineItem"><p>Measured Slump:</p>
-                    <input type = "number" name="measuredSlump" id="measuredSlump">
+                    <input type="number" name="measuredSlump" id="measuredSlump">
                 </div>
                 <div class="lineItem"><p>Concrete Temperature</p>
-                    <input type = "text" name="concreteTemp" id="conTemp">
+                    <input type="text" name="concreteTemp" id="conTemp">
                 </div>
                 <div class="lineItem"><p>Measured Air Percentage:</p>
-                    <input type = "text" name="measuredAir" id="measuredAir">
+                    <input type="text" name="measuredAir" id="measuredAir">
                 </div>
                 <div class="lineItem"><p>Authorized By:</p>
-                    <input type = "text" name="authorizedBy" id="authBy">
+                    <input type="text" name="authorizedBy" id="authBy">
                 </div>
                 <div class="lineItem"><p>Quantity:</p>
-                    <input type = "number" name="quantity" id="quant">
+                    <input type="number" name="quantity" id="quant">
                 </div>
                 <div class="lineItem"><p>Accumulated Quantity:</p>
-                    <input type = "text" name="accQuantity" id="accQuant">
+                    <input type="text" name="accQuantity" id="accQuant">
                 </div>
                <div class="lineItem"><p>Type of Mold and Size:</p>
                     <select class="" name="typeOfMold" id="mold">
-                        <option value = "Plastic 102 x 204 mm">Plastic 102 x 204 mm</option>
-                        <option value = "Plastic 152 x 304 mm">Plastic 152 x 304 mm</option>
-                        <option value = "Metal 102 x 204 mm">Metal 102 x 204 mm</option>
-                        <option value = "Metal 152 x 304 mm">Metal 152 x 304 mm</option>
+                        <option value="Plastic 102 x 204 mm">Plastic 102 x 204 mm</option>
+                        <option value="Plastic 152 x 304 mm">Plastic 152 x 304 mm</option>
+                        <option value="Metal 102 x 204 mm">Metal 102 x 204 mm</option>
+                        <option value="Metal 152 x 304 mm">Metal 152 x 304 mm</option>
                     </select>
                 </div>
                 <div class="lineItem"><p>Ticket No.:</p>
-                    <input type = "number" name="ticketNumber" id="ticketNum">
+                    <input type="number" name="ticketNumber" id="ticketNum">
                 </div>
                 <div class="lineItem"><p>Maximum Curing Temperature:</p>
-                    <input type = "text" name="maxCuringTemp" id="maxCurTemp">
+                    <input type="text" name="maxCuringTemp" id="maxCurTemp">
                 </div>
             </div>
         </div>
@@ -339,35 +152,35 @@
             </div>
             <div id="ColCylID">
                 <p class="tableText">Cylinder ID</p>
-                <div class="lineItem2"  id="CylID1"><input class="tableInput" type=text name = "CylID[]"></div>
+                <div class="lineItem2"  id="CylID1"><input class="tableInput" type=text name="CylID[]"></div>
             </div>
             <div id="ColCuringType">
                 <p class="tableText">Curing Type</p>
-                <div class="lineItem2" id="CurType1"><input class="tableInput" type=text name = "CurType[]"></div>
+                <div class="lineItem2" id="CurType1"><input class="tableInput" type=text name="CurType[]"></div>
             </div>
             <div id="ColDiam1">
                 <p class="tableText">Diameter</p>
-                <div class="lineItem2" id="Diam1"><input class="tableInput" type=text name = "Diam[]"></div>        
+                <div class="lineItem2" id="Diam1"><input class="tableInput" type=text name="Diam[]"></div>        
             </div>
             <div id="ColDiam2">
                 <p class="tableText">Diameter</p>
-                <div class="lineItem2" id="DiamTwo1"><input class="tableInput" type=text name = "DiamTwo[]"></div>
+                <div class="lineItem2" id="DiamTwo1"><input class="tableInput" type=text name="DiamTwo[]"></div>
             </div>
             <div id="ColWeight">
                 <p class="tableText">Weight</p>
-                <div class="lineItem2" id="Weight1"><input class="tableInput" type=text name = "Weight[]"></div>
+                <div class="lineItem2" id="Weight1"><input class="tableInput" type=text name="Weight[]"></div>
             </div>
             <div id="ColLength1">
                 <p class="tableText">Length</p>
-                <div class="lineItem2" id="Length1"><input class="tableInput" type=text name = "Length[]"></div>
+                <div class="lineItem2" id="Length1"><input class="tableInput" type=text name="Length[]"></div>
             </div>
             <div id="ColLength2">
                 <p class="tableText">Length</p>
-                <div class="lineItem2" id="LengthTwo1"><input class="tableInput" type=text name = "LengthTwo[]"></div>
+                <div class="lineItem2" id="LengthTwo1"><input class="tableInput" type=text name="LengthTwo[]"></div>
             </div>
             <div id="ColBreakAfter">
                 <p class="tableText">Break days</p>
-                <div class="lineItem2" id="BreakDays1"><input class="tableInput" type=text name = "BreakDays[]"></div>
+                <div class="lineItem2" id="BreakDays1"><input class="tableInput" type=text name="BreakDays[]"></div>
             </div>
         </div>
         <div>
