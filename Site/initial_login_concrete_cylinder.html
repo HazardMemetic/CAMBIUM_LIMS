@@ -141,48 +141,46 @@
             </div>
         </div>
 <!-- ------------------------------------Cylinder input table------------------------------------------------------ -->        
-        <div class="grid-topline-2">
-                <h2>Cylinder/Cube/Core Details</h2>
-            </div>
-        <div class="grid-container-2">
-            
-            <div id="ColDelete">
-                <p class="tableText">Delete</p>
-                <div class="lineItem2" id="DeleteButton1"><input style="margin: 4px auto;" class="tableButton" type=button value="X" onclick="deleteRow(this.parentElement)"></div>
-            </div>
-            <div id="ColCylID">
-                <p class="tableText">Cylinder ID</p>
-                <div class="lineItem2"  id="CylID1"><input class="tableInput" type=text name="CylID[]"></div>
-            </div>
-            <div id="ColCuringType">
-                <p class="tableText">Curing Type</p>
-                <div class="lineItem2" id="CurType1"><input class="tableInput" type=text name="CurType[]"></div>
-            </div>
-            <div id="ColDiam1">
-                <p class="tableText">Diameter</p>
-                <div class="lineItem2" id="Diam1"><input class="tableInput" type=text name="Diam[]"></div>        
-            </div>
-            <div id="ColDiam2">
-                <p class="tableText">Diameter</p>
-                <div class="lineItem2" id="DiamTwo1"><input class="tableInput" type=text name="DiamTwo[]"></div>
-            </div>
-            <div id="ColWeight">
-                <p class="tableText">Weight</p>
-                <div class="lineItem2" id="Weight1"><input class="tableInput" type=text name="Weight[]"></div>
-            </div>
-            <div id="ColLength1">
-                <p class="tableText">Length</p>
-                <div class="lineItem2" id="Length1"><input class="tableInput" type=text name="Length[]"></div>
-            </div>
-            <div id="ColLength2">
-                <p class="tableText">Length</p>
-                <div class="lineItem2" id="LengthTwo1"><input class="tableInput" type=text name="LengthTwo[]"></div>
-            </div>
-            <div id="ColBreakAfter">
-                <p class="tableText">Break days</p>
-                <div class="lineItem2" id="BreakDays1"><input class="tableInput" type=text name="BreakDays[]"></div>
-            </div>
-        </div>
+                <div>
+                    <h2>Cylinder/Cube/Core Details</h2>
+                </div>
+                <div class="col-lg-2" id="ColDelete">
+                    <p>Delete</p>
+                    <div class="lineItem2" id="DeleteButton1"><input style="margin: 4px auto;" class="tableButton" type=button value="X" onclick="deleteRow(this.parentElement)"></div>
+                </div>
+                <div class="col-lg-2"  id="ColCylID">
+                    <p>Cylinder ID</p>
+                    <div class="lineItem2"  id="CylID1"><input class="tableInput" type=text name="CylID[]"></div>
+                </div>
+                <div id="ColCuringType">
+                    <p class="tableText">Curing Type</p>
+                    <div class="lineItem2" id="CurType1"><input class="tableInput" type=text name="CurType[]"></div>
+                </div>
+                <div id="ColDiam1">
+                    <p class="tableText">Diameter</p>
+                    <div class="lineItem2" id="Diam1"><input class="tableInput" type=text name="Diam[]"></div>        
+                </div>
+                <div id="ColDiam2">
+                    <p class="tableText">Diameter</p>
+                    <div class="lineItem2" id="DiamTwo1"><input class="tableInput" type=text name="DiamTwo[]"></div>
+                </div>
+                <div id="ColWeight">
+                    <p class="tableText">Weight</p>
+                    <div class="lineItem2" id="Weight1"><input class="tableInput" type=text name="Weight[]"></div>
+                </div>
+                <div id="ColLength1">
+                    <p class="tableText">Length</p>
+                    <div class="lineItem2" id="Length1"><input class="tableInput" type=text name="Length[]"></div>
+                </div>
+                <div id="ColLength2">
+                    <p class="tableText">Length</p>
+                    <div class="lineItem2" id="LengthTwo1"><input class="tableInput" type=text name="LengthTwo[]"></div>
+                </div>
+                <div id="ColBreakAfter">
+                    <p class="tableText">Break days</p>
+                    <div class="lineItem2" id="BreakDays1"><input class="tableInput" type=text name="BreakDays[]"></div>
+                </div>
+        
         <div>
             <input class="interact" type="button" id="addButton" onclick="AddRow()" value="Add Row">
         </div>
