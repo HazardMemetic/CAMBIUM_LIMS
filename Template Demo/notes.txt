@@ -1,0 +1,10 @@
+1.clean up page  *
+2.Add rows at bottom
+3.Make rows work
+4.Fix menu
+
+
+5. remove search/top right/tables + print
+
+
+Cambium font - century gothic
